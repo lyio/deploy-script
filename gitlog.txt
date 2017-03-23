@@ -1,0 +1,12 @@
+commit c055ec3982b9d516561784f6f15e87700ec6db4c
+Merge: 1ddef7c fb83cd0
+Author: Darth Vader <d.vader@empire.de>
+Date:   Fri Oct 23 17:22:31 2015 +0200
+
+    Merge branch '#969-Use-new-deployment-script-for-contiuous-deployment' into 'master'
+    
+    #969 Use new deployment script for contiuous deployment
+    
+    This closes #969
+    
+    See merge request !991

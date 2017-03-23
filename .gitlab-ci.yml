@@ -1,0 +1,26 @@
+before_script:
+  - export PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+  - export GEM_HOME=~/.gem
+  - gem install --user-install bundler
+  - gem env
+  - bundle install
+  
+stages:
+  - test
+  - deploy
+  
+spec:
+  stage: test
+  script:
+    - bundle exec rake spec
+  tags:
+    - linux
+
+install:
+  stage: deploy
+  script:
+    - bundle exec rake install
+  only:
+    - master
+  tags:
+    - linux
